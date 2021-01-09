@@ -19,4 +19,132 @@
 
 .main-chat {
     margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat__timestamp {
+    color: white;
+    background-color: #92a4b2;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.message-row img {
+    width: 55px;
+    height: 55px;
+    border-radius: 40%;
+    margin-right: 15px;
+}
+
+.message-row__author {
+    opacity: 0.8;
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.message-row__bubble {
+    background-color: white;
+    padding: 7px 10px;
+    border-radius: 14px;
+    border-top-left-radius: 0px;
+    margin-right: 5px;
+}
+
+.message-row__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message-row__time {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.message-row--own {
+    justify-content: flex-end;
+}
+
+.message-row--own .message-row__bubble {
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 14px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.message-row--own .message-row__info {
+    flex-direction: row-reverse;
+}
+
+.reply {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+
+.reply .reply__column:first-child {
+    width: 8%;
+}
+
+.reply .reply__column:last-child {
+    width: 92%;
+    position: relative;
+}
+
+.reply input {
+    height: 30px;
+    width: 95%;
+    border: var(--main-border);
+    border-radius: 15px;
+    padding: 2px 10px;
+}
+
+.reply i {
+    opacity: 0.6;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: absolute;
+    right: -3px;
+    top: 3px;
+}
+
+.reply__column:last-child > i {
+    right: 33px;
+    top: 11px;
+}
+
+.reply__column button {
+    background-color: var(--yellow);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+    outline: none;
+}
+
+.reply__column button i {
+    opacity: 1;
 }
