@@ -79,6 +79,26 @@
     border-radius: 10px;
 }
 
+@keyframes heartBeat {
+    0% {
+        transform: none;
+        color: white;
+    }
+    50% {
+        transform: scale(1.5);
+        color: tomato;
+    }
+    100% {
+        transform: none;
+        color: white;
+    }
+}
+
+.open-post__heart-count:hover i {
+    will-change: transform;
+    animation: heartBeat 1.5s linear infinite;
+}
+
 .open-post__heart-count {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
