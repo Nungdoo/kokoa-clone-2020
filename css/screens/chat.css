@@ -160,3 +160,24 @@
 .reply__column button i {
     opacity: 1;
 }
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+    opacity: 0;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/*.reply:focus-within input {
+    width: 88vw;
+    transform: translateX(-9%) translateY(-80px);
+}
+
+.reply:focus-within {
+    transform: translateY(80px);
+}*/
